@@ -1,0 +1,89 @@
+@use './variables';
+
+.search {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1.5rem;
+    max-width: 100%;
+}
+
+.search__input {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    background-color: variables.$white;
+    padding: 20px;
+    border-radius: 5px;
+
+    input {
+        border: none;
+        outline: none;
+        max-width: 90%;
+    }
+}
+
+.search__select {
+    margin-top: 10px;
+    align-self: flex-start;
+    background-color: variables.$white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    
+    select {
+        border: none;
+        position: relative;
+        outline: none;
+        width: 100%;
+
+         
+    }
+}
+
+@media (min-width: 415px) {
+    .search {
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 50px;
+        max-width: 80%;
+        margin: 40px auto;
+    }
+
+    .search__input {
+        width: 50%;
+        padding: 1rem;
+        border-radius: 5px;
+
+        input {
+            border: none;
+            outline: none;
+            width: 100%;
+        }
+
+        img {
+            cursor: pointer;
+        }
+
+        img:hover {
+            background-color: variables.$light-gray;
+            border-radius: 50%;
+            padding: 5px;
+        }
+    }
+    
+    .search__select {
+        border: none;
+        position: relative;
+        outline: none;
+        width: 15%;
+
+        option {
+            border: transparent;
+            position: absolute;
+            top: 150px;
+            width: 100%;
+        }
+    }
+}
