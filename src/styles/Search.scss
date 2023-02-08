@@ -37,7 +37,7 @@
         position: relative;
         outline: none;
         width: 100%;
-
+        cursor: pointer;
          
     }
 }
@@ -60,16 +60,18 @@
             border: none;
             outline: none;
             width: 100%;
+            overflow: hidden;
         }
 
         img {
             cursor: pointer;
         }
 
-        img:hover {
+        picture:hover {
             background-color: variables.$light-gray;
             border-radius: 50%;
             padding: 5px;
+            object-fit: cover;
         }
     }
     
@@ -78,6 +80,7 @@
         position: relative;
         outline: none;
         width: 15%;
+        cursor: pointer;
 
         option {
             border: transparent;
