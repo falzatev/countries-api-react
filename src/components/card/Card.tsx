@@ -1,7 +1,7 @@
 import React from 'react';
 import ICountryData from '../../types/country.type';
 
-import { useTheme } from '../../contexts/ThemeProvider';
+import { useTheme } from '../../contexts/Providers';
 
 import '../../styles/card.scss';
 

@@ -1,26 +1,9 @@
 import React, { createContext, useState, useContext } from "react";
 import ICountryData from "../types/country.type";
+import { Theme, ThemeContext, ProviderProps, CountryContext } from "./Contexts";
 
-type Theme = "light" | "dark";
 
-interface ThemeContextType {
-  theme: Theme;
-  setTheme: (theme: Theme) => void;
-}
-
-export const ThemeContext = createContext<ThemeContextType | null>(null);
-
-export const CountryContext = createContext<ICountryData | null>(null);
-
-interface ThemeProviderProps {
-  children: React.ReactNode;
-}
-
-interface CountryProviderProps {
-  children: React.ReactNode;
-}
-
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
+export const ThemeProvider: React.FC<ProviderProps> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>("light");
 
   const toggleTheme = () => {
@@ -34,7 +17,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   );
 };
 
-export const CountryProvider: React.FC<ThemeProviderProps> = ({ children }) => {
+export const CountryProvider: React.FC<ProviderProps> = ({ children }) => {
   const [country, setCountry] = useState({});
 
   return (

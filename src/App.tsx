@@ -8,8 +8,8 @@ import api from './http-common/http-common';
 import ICountryData from './types/country.type';
 import Modal from './components/modal/Modal';
 
-import { CountryProvider, useTheme } from './contexts/ThemeProvider';
-import { useCountry } from './contexts/ThemeProvider';
+import { CountryProvider, useTheme } from './contexts/Providers';
+import { useCountry } from './contexts/Providers';
 
 
 const App: React.FC =() => {

@@ -3,7 +3,7 @@ import ICountryData from '../../types/country.type';
 import Card from '../card/Card';
 
 import '../../styles/home.scss';
-import { useCountry } from '../../contexts/ThemeProvider';
+import { useCountry } from '../../contexts/Providers';
 
 const Home = (props: any) => {
     
