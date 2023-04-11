@@ -5,7 +5,7 @@
     align-items: center;
     flex-wrap: wrap;
     margin: 1.5rem;
-    max-width: 100%;
+    width: 80%;
 }
 
 .search__input {
@@ -44,11 +44,12 @@
 
 @media (min-width: 415px) {
     .search {
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
         gap: 50px;
-        max-width: 80%;
+        width: 95%;
         margin: 40px auto;
+        max-width: 1200px;
     }
 
     .search__input {

@@ -1,10 +1,10 @@
-import React from "react";
+// import React from "react";
 
-export const initialThemeState = {
-    theme: "light",
-    setTheme: () => {}
-};
+// export const initialThemeState = {
+//     theme: "light",
+//     setTheme: () => {}
+// };
 
-const ThemeContext = React.createContext(initialThemeState);
+// const ThemeContext = React.createContext(initialThemeState);
 
-export default ThemeContext;
+// export default ThemeContext;

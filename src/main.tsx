@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import { CountryProvider, ThemeProvider } from './contexts/ThemeProvider';
 import './index.scss';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider>
+      <CountryProvider>
+        <App />
+      </CountryProvider>
+    </ThemeProvider>
   </React.StrictMode>,
 )
