@@ -1,3 +1,5 @@
+@use './variables';
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -8,6 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: auto;
 
   .modal {
     background-color: white;
@@ -15,7 +18,10 @@
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     width: 50rem;
-    height: 30rem;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     h2 {
       margin-top: 0;
@@ -27,8 +33,78 @@
   }
 }
 
-// @media (max-width: 415px) {
-//   .modal {
-//     margin: 20px;
-//   }
-// }
+.country-flag, .country-description {
+  width: 90%;
+
+  .country__currency {
+    padding: 20px 0px;
+  }
+}
+
+.country-description h2 {
+  margin-bottom: 20px;
+}
+
+.country-flag {
+  display: flex;
+  justify-content: center;
+}
+
+.flag__img {
+  width: 300px;
+  border: 1px solid variables.$light-gray;
+}
+
+.country-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+
+.country__borders h4 {
+  padding-bottom: 10px;
+}
+
+.border {
+  background-color: variables.$light-gray;
+  border: 1px solid variables.$light-gray;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 10px 5px 10px 0px;
+}
+
+.light__label {
+  color: variables.$dark-blue;
+}
+
+@media (min-width: 415px) {
+  .modal-overlay {
+    
+    .modal {
+      flex-direction: row;
+      align-items: flex-start;
+      width: 70rem;
+      box-shadow: 0 1px 5px rgba(70, 70, 71, 0.8);
+    }
+
+    .dark__mode {
+      background-color: variables.$dark-background;
+    }
+  }
+
+  .flag__img {
+    margin-top: 40px;
+  }
+
+  .country-description {
+    display: flex;
+    
+    button {
+      align-self: flex-end;
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid variables.$light-gray;
+    }
+  }
+}

@@ -7,4 +7,6 @@ export default interface ICountryData {
     subregion?: string,
     population?: bigint,
     countinents?: string,
+    languages?: string[],
+    children?: JSX.Element|JSX.Element[]
 }
